@@ -1,0 +1,3754 @@
+warning: test tests/userprog/exec-bound-2 doesn't count for grading
+warning: test tests/userprog/exec-bound-3 doesn't count for grading
+warning: test tests/userprog/exec-bound doesn't count for grading
+warning: test tests/userprog/sc-boundary-3 doesn't count for grading
+TOTAL TESTING SCORE: 0.0%
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+SUMMARY BY TEST SET
+
+Test Set                                      Pts Max  % Ttl  % Max
+--------------------------------------------- --- --- ------ ------
+tests/vm/Rubric.functionality                   0/ 55   0.0%/ 50.0%
+tests/vm/Rubric.robustness                      0/ 28   0.0%/ 15.0%
+tests/userprog/Rubric.functionality             0/108   0.0%/ 10.0%
+tests/userprog/Rubric.robustness                0/ 88   0.0%/  5.0%
+tests/filesys/base/Rubric                       0/ 30   0.0%/ 20.0%
+--------------------------------------------- --- --- ------ ------
+Total                                                   0.0%/100.0%
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+SUMMARY OF INDIVIDUAL TESTS
+
+Functionality of virtual memory subsystem (tests/vm/Rubric.functionality):
+	- Test stack growth.
+	  ** 0/ 3 tests/vm/pt-grow-stack
+	  ** 0/ 3 tests/vm/pt-grow-stk-sc
+	  ** 0/ 3 tests/vm/pt-big-stk-obj
+	  ** 0/ 3 tests/vm/pt-grow-pusha
+
+	- Test paging behavior.
+	  ** 0/ 3 tests/vm/page-linear
+	  ** 0/ 3 tests/vm/page-parallel
+	  ** 0/ 3 tests/vm/page-shuffle
+	  ** 0/ 4 tests/vm/page-merge-seq
+	  ** 0/ 4 tests/vm/page-merge-par
+	  ** 0/ 4 tests/vm/page-merge-mm
+	  ** 0/ 4 tests/vm/page-merge-stk
+
+	- Test "mmap" system call.
+	  ** 0/ 2 tests/vm/mmap-read
+	  ** 0/ 2 tests/vm/mmap-write
+	  ** 0/ 2 tests/vm/mmap-shuffle
+
+	  ** 0/ 2 tests/vm/mmap-twice
+
+	  ** 0/ 2 tests/vm/mmap-unmap
+	  ** 0/ 1 tests/vm/mmap-exit
+
+	  ** 0/ 3 tests/vm/mmap-clean
+
+	  ** 0/ 2 tests/vm/mmap-close
+	  ** 0/ 2 tests/vm/mmap-remove
+
+	- Section summary.
+	      0/ 20 tests passed
+	      0/ 55 points subtotal
+
+Robustness of virtual memory subsystem (tests/vm/Rubric.robustness):
+	- Test robustness of page table support.
+	  ** 0/ 2 tests/vm/pt-bad-addr
+	  ** 0/ 3 tests/vm/pt-bad-read
+	  ** 0/ 2 tests/vm/pt-write-code
+	  ** 0/ 3 tests/vm/pt-write-code2
+	  ** 0/ 4 tests/vm/pt-grow-bad
+
+	- Test robustness of "mmap" system call.
+	  ** 0/ 1 tests/vm/mmap-bad-fd
+	  ** 0/ 1 tests/vm/mmap-inherit
+	  ** 0/ 1 tests/vm/mmap-null
+	  ** 0/ 1 tests/vm/mmap-zero
+
+	  ** 0/ 2 tests/vm/mmap-misalign
+
+	  ** 0/ 2 tests/vm/mmap-over-code
+	  ** 0/ 2 tests/vm/mmap-over-data
+	  ** 0/ 2 tests/vm/mmap-over-stk
+	  ** 0/ 2 tests/vm/mmap-overlap
+
+
+	- Section summary.
+	      0/ 14 tests passed
+	      0/ 28 points subtotal
+
+Functionality of system calls (tests/userprog/Rubric.functionality):
+	- Test argument passing on Pintos command line.
+	  ** 0/ 3 tests/userprog/args-none
+	  ** 0/ 3 tests/userprog/args-single
+	  ** 0/ 3 tests/userprog/args-multiple
+	  ** 0/ 3 tests/userprog/args-many
+	  ** 0/ 3 tests/userprog/args-dbl-space
+
+	- Test "create" system call.
+	  ** 0/ 3 tests/userprog/create-empty
+	  ** 0/ 3 tests/userprog/create-long
+	  ** 0/ 3 tests/userprog/create-normal
+	  ** 0/ 3 tests/userprog/create-exists
+
+	- Test "open" system call.
+	  ** 0/ 3 tests/userprog/open-missing
+	  ** 0/ 3 tests/userprog/open-normal
+	  ** 0/ 3 tests/userprog/open-twice
+
+	- Test "read" system call.
+	  ** 0/ 3 tests/userprog/read-normal
+	  ** 0/ 3 tests/userprog/read-zero
+
+	- Test "write" system call.
+	  ** 0/ 3 tests/userprog/write-normal
+	  ** 0/ 3 tests/userprog/write-zero
+
+	- Test "close" system call.
+	  ** 0/ 3 tests/userprog/close-normal
+
+	- Test "exec" system call.
+	  ** 0/ 5 tests/userprog/exec-once
+	  ** 0/ 5 tests/userprog/exec-multiple
+	  ** 0/ 5 tests/userprog/exec-arg
+
+	- Test "wait" system call.
+	  ** 0/ 5 tests/userprog/wait-simple
+	  ** 0/ 5 tests/userprog/wait-twice
+
+	- Test "exit" system call.
+	  ** 0/ 5 tests/userprog/exit
+
+	- Test "halt" system call.
+	  ** 0/ 3 tests/userprog/halt
+
+	- Test recursive execution of user programs.
+	  ** 0/15 tests/userprog/multi-recurse
+
+	- Test read-only executable feature.
+	  ** 0/ 3 tests/userprog/rox-simple
+	  ** 0/ 3 tests/userprog/rox-child
+	  ** 0/ 3 tests/userprog/rox-multichild
+
+	- Section summary.
+	      0/ 28 tests passed
+	      0/108 points subtotal
+
+Robustness of system calls (tests/userprog/Rubric.robustness):
+	- Test robustness of file descriptor handling.
+	  ** 0/ 2 tests/userprog/close-stdin
+	  ** 0/ 2 tests/userprog/close-stdout
+	  ** 0/ 2 tests/userprog/close-bad-fd
+	  ** 0/ 2 tests/userprog/close-twice
+	  ** 0/ 2 tests/userprog/read-bad-fd
+	  ** 0/ 2 tests/userprog/read-stdout
+	  ** 0/ 2 tests/userprog/write-bad-fd
+	  ** 0/ 2 tests/userprog/write-stdin
+	  ** 0/ 2 tests/userprog/multi-child-fd
+
+	- Test robustness of pointer handling.
+	  ** 0/ 3 tests/userprog/create-bad-ptr
+	  ** 0/ 3 tests/userprog/exec-bad-ptr
+	  ** 0/ 3 tests/userprog/open-bad-ptr
+	  ** 0/ 3 tests/userprog/read-bad-ptr
+	  ** 0/ 3 tests/userprog/write-bad-ptr
+
+	- Test robustness of buffer copying across page boundaries.
+	  ** 0/ 3 tests/userprog/create-bound
+	  ** 0/ 3 tests/userprog/open-boundary
+	  ** 0/ 3 tests/userprog/read-boundary
+	  ** 0/ 3 tests/userprog/write-boundary
+
+	- Test handling of null pointer and empty strings.
+	  ** 0/ 2 tests/userprog/create-null
+	  ** 0/ 2 tests/userprog/open-null
+	  ** 0/ 2 tests/userprog/open-empty
+
+	- Test robustness of system call implementation.
+	  ** 0/ 3 tests/userprog/sc-bad-arg
+	  ** 0/ 3 tests/userprog/sc-bad-sp
+	  ** 0/ 5 tests/userprog/sc-boundary
+	  ** 0/ 5 tests/userprog/sc-boundary-2
+
+	- Test robustness of "exec" and "wait" system calls.
+	  ** 0/ 5 tests/userprog/exec-missing
+	  ** 0/ 5 tests/userprog/wait-bad-pid
+	  ** 0/ 5 tests/userprog/wait-killed
+
+	- Test robustness of exception handling.
+	  ** 0/ 1 tests/userprog/bad-read
+	  ** 0/ 1 tests/userprog/bad-write
+	  ** 0/ 1 tests/userprog/bad-jump
+	  ** 0/ 1 tests/userprog/bad-read2
+	  ** 0/ 1 tests/userprog/bad-write2
+	  ** 0/ 1 tests/userprog/bad-jump2
+
+	- Section summary.
+	      0/ 34 tests passed
+	      0/ 88 points subtotal
+
+Functionality of base file system (tests/filesys/base/Rubric):
+	- Test basic support for small files.
+	  ** 0/ 1 tests/filesys/base/sm-create
+	  ** 0/ 2 tests/filesys/base/sm-full
+	  ** 0/ 2 tests/filesys/base/sm-random
+	  ** 0/ 2 tests/filesys/base/sm-seq-block
+	  ** 0/ 3 tests/filesys/base/sm-seq-random
+
+	- Test basic support for large files.
+	  ** 0/ 1 tests/filesys/base/lg-create
+	  ** 0/ 2 tests/filesys/base/lg-full
+	  ** 0/ 2 tests/filesys/base/lg-random
+	  ** 0/ 2 tests/filesys/base/lg-seq-block
+	  ** 0/ 3 tests/filesys/base/lg-seq-random
+
+	- Test synchronized multiprogram access to files.
+	  ** 0/ 4 tests/filesys/base/syn-read
+	  ** 0/ 4 tests/filesys/base/syn-write
+	  ** 0/ 2 tests/filesys/base/syn-remove
+
+	- Section summary.
+	      0/ 13 tests passed
+	      0/ 30 points subtotal
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-grow-stack FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-grow-stack:
+
+Copying tests/vm/pt-grow-stack to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/kdCNr17tn1.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-grow-stack
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-grow-stk-sc FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-grow-stk-sc:
+
+Copying tests/vm/pt-grow-stk-sc to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/WqCCgke3ws.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-grow-stk-sc
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-big-stk-obj FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-big-stk-obj:
+
+Copying tests/vm/pt-big-stk-obj to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ozpFPD67bj.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-big-stk-obj
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-grow-pusha FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-grow-pusha:
+
+Copying tests/vm/pt-grow-pusha to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/XOqSSSoXdY.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-grow-pusha
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-linear FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-linear:
+
+Copying tests/vm/page-linear to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/3L3kX7Ig7J.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-linear
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-parallel FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-parallel:
+
+Copying tests/vm/page-parallel to scratch partition...
+Copying tests/vm/child-linear to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/PqtzyilK4F.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-parallel
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-shuffle FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-shuffle:
+
+Copying tests/vm/page-shuffle to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/JPrK1EtzwU.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-shuffle
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-merge-seq FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-merge-seq:
+
+Copying tests/vm/page-merge-seq to scratch partition...
+Copying tests/vm/child-sort to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/mgVBh375lh.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-merge-seq
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-merge-par FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-merge-par:
+
+Copying tests/vm/page-merge-par to scratch partition...
+Copying tests/vm/child-sort to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/KlSgA4iGyN.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-merge-par
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-merge-mm FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-merge-mm:
+
+Copying tests/vm/page-merge-mm to scratch partition...
+Copying tests/vm/child-qsort-mm to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/E5Ap7GQ2rt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-merge-mm
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/page-merge-stk FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/page-merge-stk:
+
+Copying tests/vm/page-merge-stk to scratch partition...
+Copying tests/vm/child-qsort to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/JZxwTn2T_5.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run page-merge-stk
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-read FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-read:
+
+Copying tests/vm/mmap-read to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/_IxAW1IPNF.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-read
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-write FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-write:
+
+Copying tests/vm/mmap-write to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/1YWV6xGTUn.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-write
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-shuffle FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-shuffle:
+
+Copying tests/vm/mmap-shuffle to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/k152GzQSP1.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-shuffle
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-twice FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-twice:
+
+Copying tests/vm/mmap-twice to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/g3EvEyP5br.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-twice
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-unmap FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-unmap:
+
+Copying tests/vm/mmap-unmap to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/n0i1LBbxnt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-unmap
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-exit FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-exit:
+
+Copying tests/vm/mmap-exit to scratch partition...
+Copying tests/vm/child-mm-wrt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/8I87pjBlIE.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-exit
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-clean FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-clean:
+
+Copying tests/vm/mmap-clean to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Kdc83_rbxA.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-clean
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-close FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-close:
+
+Copying tests/vm/mmap-close to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/0Beb3NlCw4.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-close
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-remove FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-remove:
+
+Copying tests/vm/mmap-remove to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/rceJHpqg3B.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-remove
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-bad-addr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-bad-addr:
+
+Copying tests/vm/pt-bad-addr to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OUEe5sxx2f.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-bad-addr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-bad-read FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-bad-read:
+
+Copying tests/vm/pt-bad-read to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/urhrq2ZnDS.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-bad-read
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-write-code FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-write-code:
+
+Copying tests/vm/pt-write-code to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Qvh9nq3u3M.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-write-code
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-write-code2 FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-write-code2:
+
+Copying tests/vm/pt-write-code2 to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ljLzVRhtXe.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-write-code2
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/pt-grow-bad FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/pt-grow-bad:
+
+Copying tests/vm/pt-grow-bad to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/eUPw65uDYZ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run pt-grow-bad
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-bad-fd FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-bad-fd:
+
+Copying tests/vm/mmap-bad-fd to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ESPyIZJ66v.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-bad-fd
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-inherit FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-inherit:
+
+Copying tests/vm/mmap-inherit to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+Copying tests/vm/child-inherit to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/zpSgL4GbFI.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-inherit
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-null FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-null:
+
+Copying tests/vm/mmap-null to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/iF_0MkF0I6.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-null
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-zero FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-zero:
+
+Copying tests/vm/mmap-zero to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/JA09ELeIx_.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-zero
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-misalign FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-misalign:
+
+Copying tests/vm/mmap-misalign to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/AQ4FomzNAC.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-misalign
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-over-code FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-over-code:
+
+Copying tests/vm/mmap-over-code to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OhgW0LTHto.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-over-code
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-over-data FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-over-data:
+
+Copying tests/vm/mmap-over-data to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OlmjDlljIE.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-over-data
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-over-stk FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-over-stk:
+
+Copying tests/vm/mmap-over-stk to scratch partition...
+Copying ../../tests/vm/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/FvjIAIbQjj.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-over-stk
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/vm/mmap-overlap FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/vm/mmap-overlap:
+
+Copying tests/vm/mmap-overlap to scratch partition...
+Copying tests/vm/zeros to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/HiNlIsteQ9.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run mmap-overlap
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/args-none FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/args-none:
+
+Copying tests/userprog/args-none to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/e6vUVFtrbG.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run args-none
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/args-single FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/args-single:
+
+Copying tests/userprog/args-single to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/mhxBRSx255.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run 'args-single onearg'
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 425 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/args-multiple FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/args-multiple:
+
+Copying tests/userprog/args-multiple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/sXKm2aLqcb.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run 'args-multiple some arguments for you!'
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 444 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/args-many FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/args-many:
+
+Copying tests/userprog/args-many to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Rn5TW_mj0F.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 460 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/args-dbl-space FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/args-dbl-space:
+
+Copying tests/userprog/args-dbl-space to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Sdpafl4GkE.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run 'args-dbl-space two  spaces!'
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 434 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-empty FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-empty:
+
+Copying tests/userprog/create-empty to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/GgObCH7KkA.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-empty
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-long FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-long:
+
+Copying tests/userprog/create-long to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/3d98kyQe3O.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-long
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-normal FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-normal:
+
+Copying tests/userprog/create-normal to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Pmyep2tV_h.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-normal
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-exists FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-exists:
+
+Copying tests/userprog/create-exists to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/sSudTx4WnD.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-exists
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-missing FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-missing:
+
+Copying tests/userprog/open-missing to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/bKOrON5gwl.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-missing
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-normal FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-normal:
+
+Copying tests/userprog/open-normal to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/0f1x2_pbti.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-normal
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-twice FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-twice:
+
+Copying tests/userprog/open-twice to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/XDoAkokkZa.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-twice
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-normal FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-normal:
+
+Copying tests/userprog/read-normal to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ql65qlbBFH.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-normal
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-zero FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-zero:
+
+Copying tests/userprog/read-zero to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/WBVPfPKfdo.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-zero
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-normal FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-normal:
+
+Copying tests/userprog/write-normal to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ksTd_5LDcA.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-normal
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-zero FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-zero:
+
+Copying tests/userprog/write-zero to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/pNUoB3Nbnb.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-zero
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/close-normal FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/close-normal:
+
+Copying tests/userprog/close-normal to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/QTPvWLe1aI.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run close-normal
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exec-once FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exec-once:
+
+Copying tests/userprog/exec-once to scratch partition...
+Copying tests/userprog/child-simple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/fGhPfkqx3U.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exec-once
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exec-multiple FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exec-multiple:
+
+Copying tests/userprog/exec-multiple to scratch partition...
+Copying tests/userprog/child-simple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/_urnfWMcLI.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exec-multiple
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exec-arg FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exec-arg:
+
+Copying tests/userprog/exec-arg to scratch partition...
+Copying tests/userprog/child-args to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/KWkKFYkkSd.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exec-arg
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 413 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/wait-simple FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/wait-simple:
+
+Copying tests/userprog/wait-simple to scratch partition...
+Copying tests/userprog/child-simple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/hljHJ0je0i.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run wait-simple
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/wait-twice FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/wait-twice:
+
+Copying tests/userprog/wait-twice to scratch partition...
+Copying tests/userprog/child-simple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/80ALuZel58.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run wait-twice
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exit FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exit:
+
+Copying tests/userprog/exit to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/qJ6Cawc40I.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exit
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 409 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/halt FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/halt:
+
+Copying tests/userprog/halt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/5o_ZngMbyt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run halt
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 409 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/multi-recurse FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/multi-recurse:
+
+Copying tests/userprog/multi-recurse to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/x4OzXRgfSJ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run 'multi-recurse 15'
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 423 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/rox-simple FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/rox-simple:
+
+Copying tests/userprog/rox-simple to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Xa0h0EKYKG.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run rox-simple
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/rox-child FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/rox-child:
+
+Copying tests/userprog/rox-child to scratch partition...
+Copying tests/userprog/child-rox to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/MG5SHeyGfZ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run rox-child
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/rox-multichild FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/rox-multichild:
+
+Copying tests/userprog/rox-multichild to scratch partition...
+Copying tests/userprog/child-rox to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/LO9ZMq6XSx.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run rox-multichild
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/close-stdin FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/close-stdin:
+
+Copying tests/userprog/close-stdin to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/PttDuKVlNO.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run close-stdin
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/close-stdout FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/close-stdout:
+
+Copying tests/userprog/close-stdout to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OXbR0dVjAi.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run close-stdout
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/close-bad-fd FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/close-bad-fd:
+
+Copying tests/userprog/close-bad-fd to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/VEKZQ1xflu.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run close-bad-fd
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/close-twice FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/close-twice:
+
+Copying tests/userprog/close-twice to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/UjYX6J_ywF.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run close-twice
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-bad-fd FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-bad-fd:
+
+Copying tests/userprog/read-bad-fd to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/mZ3yFypeqt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-bad-fd
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-stdout FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-stdout:
+
+Copying tests/userprog/read-stdout to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/xVzlaKJLoR.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-stdout
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-bad-fd FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-bad-fd:
+
+Copying tests/userprog/write-bad-fd to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/nonLePrerA.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-bad-fd
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-stdin FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-stdin:
+
+Copying tests/userprog/write-stdin to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/UyVO5Ulnzt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-stdin
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/multi-child-fd FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/multi-child-fd:
+
+Copying tests/userprog/multi-child-fd to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+Copying tests/userprog/child-close to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/WTkrjUmoYl.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run multi-child-fd
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-bad-ptr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-bad-ptr:
+
+Copying tests/userprog/create-bad-ptr to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/L2cOYzRFU6.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-bad-ptr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exec-bad-ptr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exec-bad-ptr:
+
+Copying tests/userprog/exec-bad-ptr to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/k8UgmjjKvc.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exec-bad-ptr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-bad-ptr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-bad-ptr:
+
+Copying tests/userprog/open-bad-ptr to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/_aUEZOAM9X.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-bad-ptr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-bad-ptr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-bad-ptr:
+
+Copying tests/userprog/read-bad-ptr to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/StNv3snHUT.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-bad-ptr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-bad-ptr FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-bad-ptr:
+
+Copying tests/userprog/write-bad-ptr to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/bB263w7rNT.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-bad-ptr
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-bound FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-bound:
+
+Copying tests/userprog/create-bound to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/E1ELv19dfu.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-bound
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-boundary FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-boundary:
+
+Copying tests/userprog/open-boundary to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/tbgZ_BlTfZ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-boundary
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/read-boundary FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/read-boundary:
+
+Copying tests/userprog/read-boundary to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/MEma8DN8UV.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run read-boundary
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/write-boundary FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/write-boundary:
+
+Copying tests/userprog/write-boundary to scratch partition...
+Copying ../../tests/userprog/sample.txt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/n4UH2LY2xt.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run write-boundary
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 419 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/create-null FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/create-null:
+
+Copying tests/userprog/create-null to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/fxVVlUFUV0.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run create-null
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-null FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-null:
+
+Copying tests/userprog/open-null to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/cye5R8qjTZ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-null
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/open-empty FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/open-empty:
+
+Copying tests/userprog/open-empty to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/qTHiEVWAox.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run open-empty
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/sc-bad-arg FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/sc-bad-arg:
+
+Copying tests/userprog/sc-bad-arg to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/lQVYOqNk4Y.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sc-bad-arg
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/sc-bad-sp FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/sc-bad-sp:
+
+Copying tests/userprog/sc-bad-sp to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/iCiSjuKYPM.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sc-bad-sp
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/sc-boundary FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/sc-boundary:
+
+Copying tests/userprog/sc-boundary to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OonsO2HSyX.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sc-boundary
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/sc-boundary-2 FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/sc-boundary-2:
+
+Copying tests/userprog/sc-boundary-2 to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/fR4_RMzd0O.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sc-boundary-2
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/exec-missing FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/exec-missing:
+
+Copying tests/userprog/exec-missing to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/rUIbYvG9So.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run exec-missing
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/wait-bad-pid FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/wait-bad-pid:
+
+Copying tests/userprog/wait-bad-pid to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/xgC2Onbf6C.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run wait-bad-pid
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/wait-killed FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/wait-killed:
+
+Copying tests/userprog/wait-killed to scratch partition...
+Copying tests/userprog/child-bad to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ZDi2xFVys3.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run wait-killed
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 416 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-read FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-read:
+
+Copying tests/userprog/bad-read to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/HLscAYr1UF.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-read
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 413 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-write FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-write:
+
+Copying tests/userprog/bad-write to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OY6mpEAEPD.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-write
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-jump FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-jump:
+
+Copying tests/userprog/bad-jump to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/HtfF0dAi3K.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-jump
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 413 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-read2 FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-read2:
+
+Copying tests/userprog/bad-read2 to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/UenwxpN2PT.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-read2
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-write2 FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-write2:
+
+Copying tests/userprog/bad-write2 to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/RT4dPy9o3j.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-write2
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/userprog/bad-jump2 FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/userprog/bad-jump2:
+
+Copying tests/userprog/bad-jump2 to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/pL3FOcb6hi.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run bad-jump2
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/sm-create FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/sm-create:
+
+Copying tests/filesys/base/sm-create to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/aFw_8QCTja.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sm-create
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/sm-full FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/sm-full:
+
+Copying tests/filesys/base/sm-full to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ND_ZxCShlG.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sm-full
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 412 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/sm-random FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/sm-random:
+
+Copying tests/filesys/base/sm-random to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/r7UwaOk0E7.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sm-random
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/sm-seq-block FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/sm-seq-block:
+
+Copying tests/filesys/base/sm-seq-block to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/kItk4jGYB4.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sm-seq-block
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/sm-seq-random FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/sm-seq-random:
+
+Copying tests/filesys/base/sm-seq-random to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/l32dA_q8v1.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run sm-seq-random
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/lg-create FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/lg-create:
+
+Copying tests/filesys/base/lg-create to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/8vADQZPkDD.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run lg-create
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/lg-full FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/lg-full:
+
+Copying tests/filesys/base/lg-full to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/vYu72B2FDx.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run lg-full
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 412 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/lg-random FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/lg-random:
+
+Copying tests/filesys/base/lg-random to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/EzjrD1FD6D.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run lg-random
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/lg-seq-block FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/lg-seq-block:
+
+Copying tests/filesys/base/lg-seq-block to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/INucr1sSwx.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run lg-seq-block
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 417 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/lg-seq-random FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/lg-seq-random:
+
+Copying tests/filesys/base/lg-seq-random to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/vSfCYL76M6.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run lg-seq-random
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 418 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/syn-read FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/syn-read:
+
+Copying tests/filesys/base/syn-read to scratch partition...
+Copying tests/filesys/base/child-syn-read to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/OY_M9x3gl_.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run syn-read
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 413 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/syn-write FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/syn-write:
+
+Copying tests/filesys/base/syn-write to scratch partition...
+Copying tests/filesys/base/child-syn-wrt to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/9UFFxIBYgi.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run syn-write
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 414 characters output
+Keyboard: 0 keys pressed
+Powering off...
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DETAILS OF tests/filesys/base/syn-remove FAILURE:
+
+Kernel panic in run: PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403
+Translation of call stack:
+0xc002cc02: ustar_make_header (...r.c:112 (discriminator 4))
+0xc00208c4: parse_options (.../../../threads/init.c:251)
+0xc0020403: main (...d/../../threads/init.c:88)
+
+OUTPUT FROM tests/filesys/base/syn-remove:
+
+Copying tests/filesys/base/syn-remove to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/F1V3RCtZRJ.dsk -m 4 -net none -nographic -monitor null
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from Hard Disk...
+PPiiLLoo  hhddaa1
+1
+LLooaaddiinngg...........................
+Kernel command line: -q -f extract run syn-remove
+Kernel PANIC at ../../threads/init.c:273 in parse_options(): unknown option `-f' (use -h for help)
+Call stack: 0xc002cc02 0xc00208c4 0xc0020403.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 415 characters output
+Keyboard: 0 keys pressed
+Powering off...
