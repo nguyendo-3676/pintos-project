@@ -1,0 +1,692 @@
+ .DS_Store                                                   |binary
+ src/.DS_Store                                               |binary
+ src/Make.config                                             |    3 
+ src/Makefile.build                                          |    9 
+ src/devices/intq.c                                          |    2 
+ src/devices/timer.c                                         |   12 
+ src/filesys/Make.vars                                       |    9 
+ src/filesys/buffers.c                                       |  339 ++++++
+ src/filesys/buffers.h                                       |   33 
+ src/filesys/build/Makefile                                  |  114 ++
+ src/filesys/build/devices/block.d                           |    5 
+ src/filesys/build/devices/block.o                           |binary
+ src/filesys/build/devices/ide.d                             |    7 
+ src/filesys/build/devices/ide.o                             |binary
+ src/filesys/build/devices/input.d                           |    4 
+ src/filesys/build/devices/input.o                           |binary
+ src/filesys/build/devices/intq.d                            |    4 
+ src/filesys/build/devices/intq.o                            |binary
+ src/filesys/build/devices/kbd.d                             |    5 
+ src/filesys/build/devices/kbd.o                             |binary
+ src/filesys/build/devices/partition.d                       |    6 
+ src/filesys/build/devices/partition.o                       |binary
+ src/filesys/build/devices/pit.d                             |    3 
+ src/filesys/build/devices/pit.o                             |binary
+ src/filesys/build/devices/rtc.d                             |    4 
+ src/filesys/build/devices/rtc.o                             |binary
+ src/filesys/build/devices/serial.d                          |    6 
+ src/filesys/build/devices/serial.o                          |binary
+ src/filesys/build/devices/shutdown.d                        |    8 
+ src/filesys/build/devices/shutdown.o                        |binary
+ src/filesys/build/devices/speaker.d                         |    4 
+ src/filesys/build/devices/speaker.o                         |binary
+ src/filesys/build/devices/timer.d                           |    6 
+ src/filesys/build/devices/timer.o                           |binary
+ src/filesys/build/devices/vga.d                             |    5 
+ src/filesys/build/devices/vga.o                             |binary
+ src/filesys/build/filesys/buffers.d                         |    7 
+ src/filesys/build/filesys/buffers.o                         |binary
+ src/filesys/build/filesys/directory.d                       |    7 
+ src/filesys/build/filesys/directory.o                       |binary
+ src/filesys/build/filesys/file.d                            |    4 
+ src/filesys/build/filesys/file.o                            |binary
+ src/filesys/build/filesys/filesys.d                         |    8 
+ src/filesys/build/filesys/filesys.o                         |binary
+ src/filesys/build/filesys/free-map.d                        |    5 
+ src/filesys/build/filesys/free-map.o                        |binary
+ src/filesys/build/filesys/fsutil.d                          |    8 
+ src/filesys/build/filesys/fsutil.o                          |binary
+ src/filesys/build/filesys/inode.d                           |    7 
+ src/filesys/build/filesys/inode.o                           |binary
+ src/filesys/build/filesys/path.d                            |    7 
+ src/filesys/build/filesys/path.o                            |binary
+ src/filesys/build/kernel.bin                                |binary
+ src/filesys/build/kernel.o                                  |binary
+ src/filesys/build/lib/arithmetic.d                          |    1 
+ src/filesys/build/lib/arithmetic.o                          |binary
+ src/filesys/build/lib/debug.d                               |    3 
+ src/filesys/build/lib/debug.o                               |binary
+ src/filesys/build/lib/kernel/bitmap.d                       |    6 
+ src/filesys/build/lib/kernel/bitmap.o                       |binary
+ src/filesys/build/lib/kernel/console.d                      |    6 
+ src/filesys/build/lib/kernel/console.o                      |binary
+ src/filesys/build/lib/kernel/debug.d                        |    7 
+ src/filesys/build/lib/kernel/debug.o                        |binary
+ src/filesys/build/lib/kernel/hash.d                         |    4 
+ src/filesys/build/lib/kernel/hash.o                         |binary
+ src/filesys/build/lib/kernel/list.d                         |    3 
+ src/filesys/build/lib/kernel/list.o                         |binary
+ src/filesys/build/lib/random.d                              |    2 
+ src/filesys/build/lib/random.o                              |binary
+ src/filesys/build/lib/stdio.d                               |    4 
+ src/filesys/build/lib/stdio.o                               |binary
+ src/filesys/build/lib/stdlib.d                              |    3 
+ src/filesys/build/lib/stdlib.o                              |binary
+ src/filesys/build/lib/string.d                              |    2 
+ src/filesys/build/lib/string.o                              |binary
+ src/filesys/build/lib/user/console.d                        |    4 
+ src/filesys/build/lib/user/console.o                        |binary
+ src/filesys/build/lib/user/debug.d                          |    4 
+ src/filesys/build/lib/user/debug.o                          |binary
+ src/filesys/build/lib/user/entry.d                          |    2 
+ src/filesys/build/lib/user/entry.o                          |binary
+ src/filesys/build/lib/user/syscall.d                        |    2 
+ src/filesys/build/lib/user/syscall.o                        |binary
+ src/filesys/build/lib/ustar.d                               |    4 
+ src/filesys/build/lib/ustar.o                               |binary
+ src/filesys/build/libc.a                                    |binary
+ src/filesys/build/loader.bin                                |binary
+ src/filesys/build/tests/arc4.d                              |    2 
+ src/filesys/build/tests/arc4.o                              |binary
+ src/filesys/build/tests/cksum.d                             |    2 
+ src/filesys/build/tests/cksum.o                             |binary
+ src/filesys/build/tests/filesys/base/child-syn-read         |binary
+ src/filesys/build/tests/filesys/base/child-syn-read.d       |    6 
+ src/filesys/build/tests/filesys/base/child-syn-read.o       |binary
+ src/filesys/build/tests/filesys/base/child-syn-wrt          |binary
+ src/filesys/build/tests/filesys/base/child-syn-wrt.d        |    5 
+ src/filesys/build/tests/filesys/base/child-syn-wrt.o        |binary
+ src/filesys/build/tests/filesys/base/lg-create              |binary
+ src/filesys/build/tests/filesys/base/lg-create.d            |    4 
+ src/filesys/build/tests/filesys/base/lg-create.o            |binary
+ src/filesys/build/tests/filesys/base/lg-full                |binary
+ src/filesys/build/tests/filesys/base/lg-full.d              |    3 
+ src/filesys/build/tests/filesys/base/lg-full.o              |binary
+ src/filesys/build/tests/filesys/base/lg-random              |binary
+ src/filesys/build/tests/filesys/base/lg-random.d            |    6 
+ src/filesys/build/tests/filesys/base/lg-random.o            |binary
+ src/filesys/build/tests/filesys/base/lg-seq-block           |binary
+ src/filesys/build/tests/filesys/base/lg-seq-block.d         |    4 
+ src/filesys/build/tests/filesys/base/lg-seq-block.o         |binary
+ src/filesys/build/tests/filesys/base/lg-seq-random          |binary
+ src/filesys/build/tests/filesys/base/lg-seq-random.d        |    4 
+ src/filesys/build/tests/filesys/base/lg-seq-random.o        |binary
+ src/filesys/build/tests/filesys/base/sm-create              |binary
+ src/filesys/build/tests/filesys/base/sm-create.d            |    4 
+ src/filesys/build/tests/filesys/base/sm-create.o            |binary
+ src/filesys/build/tests/filesys/base/sm-full                |binary
+ src/filesys/build/tests/filesys/base/sm-full.d              |    3 
+ src/filesys/build/tests/filesys/base/sm-full.o              |binary
+ src/filesys/build/tests/filesys/base/sm-random              |binary
+ src/filesys/build/tests/filesys/base/sm-random.d            |    6 
+ src/filesys/build/tests/filesys/base/sm-random.o            |binary
+ src/filesys/build/tests/filesys/base/sm-seq-block           |binary
+ src/filesys/build/tests/filesys/base/sm-seq-block.d         |    4 
+ src/filesys/build/tests/filesys/base/sm-seq-block.o         |binary
+ src/filesys/build/tests/filesys/base/sm-seq-random          |binary
+ src/filesys/build/tests/filesys/base/sm-seq-random.d        |    4 
+ src/filesys/build/tests/filesys/base/sm-seq-random.o        |binary
+ src/filesys/build/tests/filesys/base/syn-read               |binary
+ src/filesys/build/tests/filesys/base/syn-read.d             |    5 
+ src/filesys/build/tests/filesys/base/syn-read.o             |binary
+ src/filesys/build/tests/filesys/base/syn-remove             |binary
+ src/filesys/build/tests/filesys/base/syn-remove.d           |    4 
+ src/filesys/build/tests/filesys/base/syn-remove.o           |binary
+ src/filesys/build/tests/filesys/base/syn-write              |binary
+ src/filesys/build/tests/filesys/base/syn-write.d            |    6 
+ src/filesys/build/tests/filesys/base/syn-write.o            |binary
+ src/filesys/build/tests/filesys/extended/child-syn-rw       |binary
+ src/filesys/build/tests/filesys/extended/child-syn-rw.d     |    5 
+ src/filesys/build/tests/filesys/extended/child-syn-rw.o     |binary
+ src/filesys/build/tests/filesys/extended/dir-empty-name     |binary
+ src/filesys/build/tests/filesys/extended/dir-empty-name.d   |    4 
+ src/filesys/build/tests/filesys/extended/dir-empty-name.o   |binary
+ src/filesys/build/tests/filesys/extended/dir-mk-tree        |binary
+ src/filesys/build/tests/filesys/extended/dir-mk-tree.d      |    3 
+ src/filesys/build/tests/filesys/extended/dir-mk-tree.o      |binary
+ src/filesys/build/tests/filesys/extended/dir-mkdir          |binary
+ src/filesys/build/tests/filesys/extended/dir-mkdir.d        |    4 
+ src/filesys/build/tests/filesys/extended/dir-mkdir.o        |binary
+ src/filesys/build/tests/filesys/extended/dir-open           |binary
+ src/filesys/build/tests/filesys/extended/dir-open.d         |    4 
+ src/filesys/build/tests/filesys/extended/dir-open.o         |binary
+ src/filesys/build/tests/filesys/extended/dir-over-file      |binary
+ src/filesys/build/tests/filesys/extended/dir-over-file.d    |    4 
+ src/filesys/build/tests/filesys/extended/dir-over-file.o    |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-cwd         |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-cwd.d       |    4 
+ src/filesys/build/tests/filesys/extended/dir-rm-cwd.o       |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-parent      |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-parent.d    |    4 
+ src/filesys/build/tests/filesys/extended/dir-rm-parent.o    |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-root        |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-root.d      |    4 
+ src/filesys/build/tests/filesys/extended/dir-rm-root.o      |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-tree        |binary
+ src/filesys/build/tests/filesys/extended/dir-rm-tree.d      |    6 
+ src/filesys/build/tests/filesys/extended/dir-rm-tree.o      |binary
+ src/filesys/build/tests/filesys/extended/dir-rmdir          |binary
+ src/filesys/build/tests/filesys/extended/dir-rmdir.d        |    4 
+ src/filesys/build/tests/filesys/extended/dir-rmdir.o        |binary
+ src/filesys/build/tests/filesys/extended/dir-under-file     |binary
+ src/filesys/build/tests/filesys/extended/dir-under-file.d   |    4 
+ src/filesys/build/tests/filesys/extended/dir-under-file.o   |binary
+ src/filesys/build/tests/filesys/extended/dir-vine           |binary
+ src/filesys/build/tests/filesys/extended/dir-vine.d         |    6 
+ src/filesys/build/tests/filesys/extended/dir-vine.o         |binary
+ src/filesys/build/tests/filesys/extended/grow-create        |binary
+ src/filesys/build/tests/filesys/extended/grow-create.d      |    5 
+ src/filesys/build/tests/filesys/extended/grow-create.o      |binary
+ src/filesys/build/tests/filesys/extended/grow-dir-lg        |binary
+ src/filesys/build/tests/filesys/extended/grow-dir-lg.d      |    7 
+ src/filesys/build/tests/filesys/extended/grow-dir-lg.o      |binary
+ src/filesys/build/tests/filesys/extended/grow-file-size     |binary
+ src/filesys/build/tests/filesys/extended/grow-file-size.d   |    4 
+ src/filesys/build/tests/filesys/extended/grow-file-size.o   |binary
+ src/filesys/build/tests/filesys/extended/grow-root-lg       |binary
+ src/filesys/build/tests/filesys/extended/grow-root-lg.d     |    7 
+ src/filesys/build/tests/filesys/extended/grow-root-lg.o     |binary
+ src/filesys/build/tests/filesys/extended/grow-root-sm       |binary
+ src/filesys/build/tests/filesys/extended/grow-root-sm.d     |    7 
+ src/filesys/build/tests/filesys/extended/grow-root-sm.o     |binary
+ src/filesys/build/tests/filesys/extended/grow-seq-lg        |binary
+ src/filesys/build/tests/filesys/extended/grow-seq-lg.d      |    4 
+ src/filesys/build/tests/filesys/extended/grow-seq-lg.o      |binary
+ src/filesys/build/tests/filesys/extended/grow-seq-sm        |binary
+ src/filesys/build/tests/filesys/extended/grow-seq-sm.d      |    4 
+ src/filesys/build/tests/filesys/extended/grow-seq-sm.o      |binary
+ src/filesys/build/tests/filesys/extended/grow-sparse        |binary
+ src/filesys/build/tests/filesys/extended/grow-sparse.d      |    4 
+ src/filesys/build/tests/filesys/extended/grow-sparse.o      |binary
+ src/filesys/build/tests/filesys/extended/grow-tell          |binary
+ src/filesys/build/tests/filesys/extended/grow-tell.d        |    4 
+ src/filesys/build/tests/filesys/extended/grow-tell.o        |binary
+ src/filesys/build/tests/filesys/extended/grow-two-files     |binary
+ src/filesys/build/tests/filesys/extended/grow-two-files.d   |    4 
+ src/filesys/build/tests/filesys/extended/grow-two-files.o   |binary
+ src/filesys/build/tests/filesys/extended/mk-tree.d          |    5 
+ src/filesys/build/tests/filesys/extended/mk-tree.o          |binary
+ src/filesys/build/tests/filesys/extended/syn-rw             |binary
+ src/filesys/build/tests/filesys/extended/syn-rw.d           |    5 
+ src/filesys/build/tests/filesys/extended/syn-rw.o           |binary
+ src/filesys/build/tests/filesys/extended/tar                |binary
+ src/filesys/build/tests/filesys/extended/tar.d              |    5 
+ src/filesys/build/tests/filesys/extended/tar.o              |binary
+ src/filesys/build/tests/filesys/seq-test.d                  |    4 
+ src/filesys/build/tests/filesys/seq-test.o                  |binary
+ src/filesys/build/tests/lib.d                               |    4 
+ src/filesys/build/tests/lib.o                               |binary
+ src/filesys/build/tests/main.d                              |    3 
+ src/filesys/build/tests/main.o                              |binary
+ src/filesys/build/tests/userprog/args-dbl-space             |binary
+ src/filesys/build/tests/userprog/args-many                  |binary
+ src/filesys/build/tests/userprog/args-multiple              |binary
+ src/filesys/build/tests/userprog/args-none                  |binary
+ src/filesys/build/tests/userprog/args-single                |binary
+ src/filesys/build/tests/userprog/args.d                     |    3 
+ src/filesys/build/tests/userprog/args.o                     |binary
+ src/filesys/build/tests/userprog/bad-jump                   |binary
+ src/filesys/build/tests/userprog/bad-jump.d                 |    3 
+ src/filesys/build/tests/userprog/bad-jump.o                 |binary
+ src/filesys/build/tests/userprog/bad-jump2                  |binary
+ src/filesys/build/tests/userprog/bad-jump2.d                |    3 
+ src/filesys/build/tests/userprog/bad-jump2.o                |binary
+ src/filesys/build/tests/userprog/bad-read                   |binary
+ src/filesys/build/tests/userprog/bad-read.d                 |    3 
+ src/filesys/build/tests/userprog/bad-read.o                 |binary
+ src/filesys/build/tests/userprog/bad-read2                  |binary
+ src/filesys/build/tests/userprog/bad-read2.d                |    3 
+ src/filesys/build/tests/userprog/bad-read2.o                |binary
+ src/filesys/build/tests/userprog/bad-write                  |binary
+ src/filesys/build/tests/userprog/bad-write.d                |    3 
+ src/filesys/build/tests/userprog/bad-write.o                |binary
+ src/filesys/build/tests/userprog/bad-write2                 |binary
+ src/filesys/build/tests/userprog/bad-write2.d               |    3 
+ src/filesys/build/tests/userprog/bad-write2.o               |binary
+ src/filesys/build/tests/userprog/boundary.d                 |    3 
+ src/filesys/build/tests/userprog/boundary.o                 |binary
+ src/filesys/build/tests/userprog/child-args                 |binary
+ src/filesys/build/tests/userprog/child-bad                  |binary
+ src/filesys/build/tests/userprog/child-bad.d                |    3 
+ src/filesys/build/tests/userprog/child-bad.o                |binary
+ src/filesys/build/tests/userprog/child-close                |binary
+ src/filesys/build/tests/userprog/child-close.d              |    5 
+ src/filesys/build/tests/userprog/child-close.o              |binary
+ src/filesys/build/tests/userprog/child-rox                  |binary
+ src/filesys/build/tests/userprog/child-rox.d                |    5 
+ src/filesys/build/tests/userprog/child-rox.o                |binary
+ src/filesys/build/tests/userprog/child-simple               |binary
+ src/filesys/build/tests/userprog/child-simple.d             |    4 
+ src/filesys/build/tests/userprog/child-simple.o             |binary
+ src/filesys/build/tests/userprog/close-bad-fd               |binary
+ src/filesys/build/tests/userprog/close-bad-fd.d             |    3 
+ src/filesys/build/tests/userprog/close-bad-fd.o             |binary
+ src/filesys/build/tests/userprog/close-normal               |binary
+ src/filesys/build/tests/userprog/close-normal.d             |    3 
+ src/filesys/build/tests/userprog/close-normal.o             |binary
+ src/filesys/build/tests/userprog/close-stdin                |binary
+ src/filesys/build/tests/userprog/close-stdin.d              |    3 
+ src/filesys/build/tests/userprog/close-stdin.o              |binary
+ src/filesys/build/tests/userprog/close-stdout               |binary
+ src/filesys/build/tests/userprog/close-stdout.d             |    3 
+ src/filesys/build/tests/userprog/close-stdout.o             |binary
+ src/filesys/build/tests/userprog/close-twice                |binary
+ src/filesys/build/tests/userprog/close-twice.d              |    3 
+ src/filesys/build/tests/userprog/close-twice.o              |binary
+ src/filesys/build/tests/userprog/create-bad-ptr             |binary
+ src/filesys/build/tests/userprog/create-bad-ptr.d           |    3 
+ src/filesys/build/tests/userprog/create-bad-ptr.o           |binary
+ src/filesys/build/tests/userprog/create-bound               |binary
+ src/filesys/build/tests/userprog/create-bound.d             |    4 
+ src/filesys/build/tests/userprog/create-bound.o             |binary
+ src/filesys/build/tests/userprog/create-empty               |binary
+ src/filesys/build/tests/userprog/create-empty.d             |    3 
+ src/filesys/build/tests/userprog/create-empty.o             |binary
+ src/filesys/build/tests/userprog/create-exists              |binary
+ src/filesys/build/tests/userprog/create-exists.d            |    3 
+ src/filesys/build/tests/userprog/create-exists.o            |binary
+ src/filesys/build/tests/userprog/create-long                |binary
+ src/filesys/build/tests/userprog/create-long.d              |    4 
+ src/filesys/build/tests/userprog/create-long.o              |binary
+ src/filesys/build/tests/userprog/create-normal              |binary
+ src/filesys/build/tests/userprog/create-normal.d            |    3 
+ src/filesys/build/tests/userprog/create-normal.o            |binary
+ src/filesys/build/tests/userprog/create-null                |binary
+ src/filesys/build/tests/userprog/create-null.d              |    3 
+ src/filesys/build/tests/userprog/create-null.o              |binary
+ src/filesys/build/tests/userprog/exec-arg                   |binary
+ src/filesys/build/tests/userprog/exec-arg.d                 |    3 
+ src/filesys/build/tests/userprog/exec-arg.o                 |binary
+ src/filesys/build/tests/userprog/exec-bad-ptr               |binary
+ src/filesys/build/tests/userprog/exec-bad-ptr.d             |    3 
+ src/filesys/build/tests/userprog/exec-bad-ptr.o             |binary
+ src/filesys/build/tests/userprog/exec-bound                 |binary
+ src/filesys/build/tests/userprog/exec-bound-2               |binary
+ src/filesys/build/tests/userprog/exec-bound-2.d             |    4 
+ src/filesys/build/tests/userprog/exec-bound-2.o             |binary
+ src/filesys/build/tests/userprog/exec-bound-3               |binary
+ src/filesys/build/tests/userprog/exec-bound-3.d             |    4 
+ src/filesys/build/tests/userprog/exec-bound-3.o             |binary
+ src/filesys/build/tests/userprog/exec-bound.d               |    4 
+ src/filesys/build/tests/userprog/exec-bound.o               |binary
+ src/filesys/build/tests/userprog/exec-missing               |binary
+ src/filesys/build/tests/userprog/exec-missing.d             |    3 
+ src/filesys/build/tests/userprog/exec-missing.o             |binary
+ src/filesys/build/tests/userprog/exec-multiple              |binary
+ src/filesys/build/tests/userprog/exec-multiple.d            |    3 
+ src/filesys/build/tests/userprog/exec-multiple.o            |binary
+ src/filesys/build/tests/userprog/exec-once                  |binary
+ src/filesys/build/tests/userprog/exec-once.d                |    3 
+ src/filesys/build/tests/userprog/exec-once.o                |binary
+ src/filesys/build/tests/userprog/exit                       |binary
+ src/filesys/build/tests/userprog/exit.d                     |    3 
+ src/filesys/build/tests/userprog/exit.o                     |binary
+ src/filesys/build/tests/userprog/halt                       |binary
+ src/filesys/build/tests/userprog/halt.d                     |    3 
+ src/filesys/build/tests/userprog/halt.o                     |binary
+ src/filesys/build/tests/userprog/multi-child-fd             |binary
+ src/filesys/build/tests/userprog/multi-child-fd.d           |    5 
+ src/filesys/build/tests/userprog/multi-child-fd.o           |binary
+ src/filesys/build/tests/userprog/multi-recurse              |binary
+ src/filesys/build/tests/userprog/multi-recurse.d            |    5 
+ src/filesys/build/tests/userprog/multi-recurse.o            |binary
+ src/filesys/build/tests/userprog/open-bad-ptr               |binary
+ src/filesys/build/tests/userprog/open-bad-ptr.d             |    3 
+ src/filesys/build/tests/userprog/open-bad-ptr.o             |binary
+ src/filesys/build/tests/userprog/open-boundary              |binary
+ src/filesys/build/tests/userprog/open-boundary.d            |    4 
+ src/filesys/build/tests/userprog/open-boundary.o            |binary
+ src/filesys/build/tests/userprog/open-empty                 |binary
+ src/filesys/build/tests/userprog/open-empty.d               |    3 
+ src/filesys/build/tests/userprog/open-empty.o               |binary
+ src/filesys/build/tests/userprog/open-missing               |binary
+ src/filesys/build/tests/userprog/open-missing.d             |    3 
+ src/filesys/build/tests/userprog/open-missing.o             |binary
+ src/filesys/build/tests/userprog/open-normal                |binary
+ src/filesys/build/tests/userprog/open-normal.d              |    3 
+ src/filesys/build/tests/userprog/open-normal.o              |binary
+ src/filesys/build/tests/userprog/open-null                  |binary
+ src/filesys/build/tests/userprog/open-null.d                |    3 
+ src/filesys/build/tests/userprog/open-null.o                |binary
+ src/filesys/build/tests/userprog/open-twice                 |binary
+ src/filesys/build/tests/userprog/open-twice.d               |    3 
+ src/filesys/build/tests/userprog/open-twice.o               |binary
+ src/filesys/build/tests/userprog/read-bad-fd                |binary
+ src/filesys/build/tests/userprog/read-bad-fd.d              |    4 
+ src/filesys/build/tests/userprog/read-bad-fd.o              |binary
+ src/filesys/build/tests/userprog/read-bad-ptr               |binary
+ src/filesys/build/tests/userprog/read-bad-ptr.d             |    3 
+ src/filesys/build/tests/userprog/read-bad-ptr.o             |binary
+ src/filesys/build/tests/userprog/read-boundary              |binary
+ src/filesys/build/tests/userprog/read-boundary.d            |    4 
+ src/filesys/build/tests/userprog/read-boundary.o            |binary
+ src/filesys/build/tests/userprog/read-normal                |binary
+ src/filesys/build/tests/userprog/read-normal.d              |    4 
+ src/filesys/build/tests/userprog/read-normal.o              |binary
+ src/filesys/build/tests/userprog/read-stdout                |binary
+ src/filesys/build/tests/userprog/read-stdout.d              |    4 
+ src/filesys/build/tests/userprog/read-stdout.o              |binary
+ src/filesys/build/tests/userprog/read-zero                  |binary
+ src/filesys/build/tests/userprog/read-zero.d                |    3 
+ src/filesys/build/tests/userprog/read-zero.o                |binary
+ src/filesys/build/tests/userprog/rox-child                  |binary
+ src/filesys/build/tests/userprog/rox-child.d                |    4 
+ src/filesys/build/tests/userprog/rox-child.o                |binary
+ src/filesys/build/tests/userprog/rox-multichild             |binary
+ src/filesys/build/tests/userprog/rox-multichild.d           |    4 
+ src/filesys/build/tests/userprog/rox-multichild.o           |binary
+ src/filesys/build/tests/userprog/rox-simple                 |binary
+ src/filesys/build/tests/userprog/rox-simple.d               |    3 
+ src/filesys/build/tests/userprog/rox-simple.o               |binary
+ src/filesys/build/tests/userprog/sc-bad-arg                 |binary
+ src/filesys/build/tests/userprog/sc-bad-arg.d               |    4 
+ src/filesys/build/tests/userprog/sc-bad-arg.o               |binary
+ src/filesys/build/tests/userprog/sc-bad-sp                  |binary
+ src/filesys/build/tests/userprog/sc-bad-sp.d                |    3 
+ src/filesys/build/tests/userprog/sc-bad-sp.o                |binary
+ src/filesys/build/tests/userprog/sc-boundary                |binary
+ src/filesys/build/tests/userprog/sc-boundary-2              |binary
+ src/filesys/build/tests/userprog/sc-boundary-2.d            |    4 
+ src/filesys/build/tests/userprog/sc-boundary-2.o            |binary
+ src/filesys/build/tests/userprog/sc-boundary-3              |binary
+ src/filesys/build/tests/userprog/sc-boundary-3.d            |    4 
+ src/filesys/build/tests/userprog/sc-boundary-3.o            |binary
+ src/filesys/build/tests/userprog/sc-boundary.d              |    4 
+ src/filesys/build/tests/userprog/sc-boundary.o              |binary
+ src/filesys/build/tests/userprog/wait-bad-pid               |binary
+ src/filesys/build/tests/userprog/wait-bad-pid.d             |    3 
+ src/filesys/build/tests/userprog/wait-bad-pid.o             |binary
+ src/filesys/build/tests/userprog/wait-killed                |binary
+ src/filesys/build/tests/userprog/wait-killed.d              |    3 
+ src/filesys/build/tests/userprog/wait-killed.o              |binary
+ src/filesys/build/tests/userprog/wait-simple                |binary
+ src/filesys/build/tests/userprog/wait-simple.d              |    3 
+ src/filesys/build/tests/userprog/wait-simple.o              |binary
+ src/filesys/build/tests/userprog/wait-twice                 |binary
+ src/filesys/build/tests/userprog/wait-twice.d               |    3 
+ src/filesys/build/tests/userprog/wait-twice.o               |binary
+ src/filesys/build/tests/userprog/write-bad-fd               |binary
+ src/filesys/build/tests/userprog/write-bad-fd.d             |    3 
+ src/filesys/build/tests/userprog/write-bad-fd.o             |binary
+ src/filesys/build/tests/userprog/write-bad-ptr              |binary
+ src/filesys/build/tests/userprog/write-bad-ptr.d            |    3 
+ src/filesys/build/tests/userprog/write-bad-ptr.o            |binary
+ src/filesys/build/tests/userprog/write-boundary             |binary
+ src/filesys/build/tests/userprog/write-boundary.d           |    4 
+ src/filesys/build/tests/userprog/write-boundary.o           |binary
+ src/filesys/build/tests/userprog/write-normal               |binary
+ src/filesys/build/tests/userprog/write-normal.d             |    4 
+ src/filesys/build/tests/userprog/write-normal.o             |binary
+ src/filesys/build/tests/userprog/write-stdin                |binary
+ src/filesys/build/tests/userprog/write-stdin.d              |    3 
+ src/filesys/build/tests/userprog/write-stdin.o              |binary
+ src/filesys/build/tests/userprog/write-zero                 |binary
+ src/filesys/build/tests/userprog/write-zero.d               |    3 
+ src/filesys/build/tests/userprog/write-zero.o               |binary
+ src/filesys/build/tests/vm/child-inherit                    |binary
+ src/filesys/build/tests/vm/child-inherit.d                  |    4 
+ src/filesys/build/tests/vm/child-inherit.o                  |binary
+ src/filesys/build/tests/vm/child-linear                     |binary
+ src/filesys/build/tests/vm/child-linear.d                   |    4 
+ src/filesys/build/tests/vm/child-linear.o                   |binary
+ src/filesys/build/tests/vm/child-mm-wrt                     |binary
+ src/filesys/build/tests/vm/child-mm-wrt.d                   |    4 
+ src/filesys/build/tests/vm/child-mm-wrt.o                   |binary
+ src/filesys/build/tests/vm/child-qsort                      |binary
+ src/filesys/build/tests/vm/child-qsort-mm                   |binary
+ src/filesys/build/tests/vm/child-qsort-mm.d                 |    4 
+ src/filesys/build/tests/vm/child-qsort-mm.o                 |binary
+ src/filesys/build/tests/vm/child-qsort.d                    |    3 
+ src/filesys/build/tests/vm/child-qsort.o                    |binary
+ src/filesys/build/tests/vm/child-sort                       |binary
+ src/filesys/build/tests/vm/child-sort.d                     |    3 
+ src/filesys/build/tests/vm/child-sort.o                     |binary
+ src/filesys/build/tests/vm/mmap-bad-fd                      |binary
+ src/filesys/build/tests/vm/mmap-bad-fd.d                    |    3 
+ src/filesys/build/tests/vm/mmap-bad-fd.o                    |binary
+ src/filesys/build/tests/vm/mmap-clean                       |binary
+ src/filesys/build/tests/vm/mmap-clean.d                     |    4 
+ src/filesys/build/tests/vm/mmap-clean.o                     |binary
+ src/filesys/build/tests/vm/mmap-close                       |binary
+ src/filesys/build/tests/vm/mmap-close.d                     |    4 
+ src/filesys/build/tests/vm/mmap-close.o                     |binary
+ src/filesys/build/tests/vm/mmap-exit                        |binary
+ src/filesys/build/tests/vm/mmap-exit.d                      |    3 
+ src/filesys/build/tests/vm/mmap-exit.o                      |binary
+ src/filesys/build/tests/vm/mmap-inherit                     |binary
+ src/filesys/build/tests/vm/mmap-inherit.d                   |    4 
+ src/filesys/build/tests/vm/mmap-inherit.o                   |binary
+ src/filesys/build/tests/vm/mmap-misalign                    |binary
+ src/filesys/build/tests/vm/mmap-misalign.d                  |    3 
+ src/filesys/build/tests/vm/mmap-misalign.o                  |binary
+ src/filesys/build/tests/vm/mmap-null                        |binary
+ src/filesys/build/tests/vm/mmap-null.d                      |    3 
+ src/filesys/build/tests/vm/mmap-null.o                      |binary
+ src/filesys/build/tests/vm/mmap-over-code                   |binary
+ src/filesys/build/tests/vm/mmap-over-code.d                 |    4 
+ src/filesys/build/tests/vm/mmap-over-code.o                 |binary
+ src/filesys/build/tests/vm/mmap-over-data                   |binary
+ src/filesys/build/tests/vm/mmap-over-data.d                 |    4 
+ src/filesys/build/tests/vm/mmap-over-data.o                 |binary
+ src/filesys/build/tests/vm/mmap-over-stk                    |binary
+ src/filesys/build/tests/vm/mmap-over-stk.d                  |    4 
+ src/filesys/build/tests/vm/mmap-over-stk.o                  |binary
+ src/filesys/build/tests/vm/mmap-overlap                     |binary
+ src/filesys/build/tests/vm/mmap-overlap.d                   |    4 
+ src/filesys/build/tests/vm/mmap-overlap.o                   |binary
+ src/filesys/build/tests/vm/mmap-read                        |binary
+ src/filesys/build/tests/vm/mmap-read.d                      |    4 
+ src/filesys/build/tests/vm/mmap-read.o                      |binary
+ src/filesys/build/tests/vm/mmap-remove                      |binary
+ src/filesys/build/tests/vm/mmap-remove.d                    |    4 
+ src/filesys/build/tests/vm/mmap-remove.o                    |binary
+ src/filesys/build/tests/vm/mmap-shuffle                     |binary
+ src/filesys/build/tests/vm/mmap-shuffle.d                   |    5 
+ src/filesys/build/tests/vm/mmap-shuffle.o                   |binary
+ src/filesys/build/tests/vm/mmap-twice                       |binary
+ src/filesys/build/tests/vm/mmap-twice.d                     |    4 
+ src/filesys/build/tests/vm/mmap-twice.o                     |binary
+ src/filesys/build/tests/vm/mmap-unmap                       |binary
+ src/filesys/build/tests/vm/mmap-unmap.d                     |    4 
+ src/filesys/build/tests/vm/mmap-unmap.o                     |binary
+ src/filesys/build/tests/vm/mmap-write                       |binary
+ src/filesys/build/tests/vm/mmap-write.d                     |    4 
+ src/filesys/build/tests/vm/mmap-write.o                     |binary
+ src/filesys/build/tests/vm/mmap-zero                        |binary
+ src/filesys/build/tests/vm/mmap-zero.d                      |    3 
+ src/filesys/build/tests/vm/mmap-zero.o                      |binary
+ src/filesys/build/tests/vm/page-linear                      |binary
+ src/filesys/build/tests/vm/page-linear.d                    |    4 
+ src/filesys/build/tests/vm/page-linear.o                    |binary
+ src/filesys/build/tests/vm/page-merge-mm                    |binary
+ src/filesys/build/tests/vm/page-merge-mm.d                  |    2 
+ src/filesys/build/tests/vm/page-merge-mm.o                  |binary
+ src/filesys/build/tests/vm/page-merge-par                   |binary
+ src/filesys/build/tests/vm/page-merge-par.d                 |    2 
+ src/filesys/build/tests/vm/page-merge-par.o                 |binary
+ src/filesys/build/tests/vm/page-merge-seq                   |binary
+ src/filesys/build/tests/vm/page-merge-seq.d                 |    4 
+ src/filesys/build/tests/vm/page-merge-seq.o                 |binary
+ src/filesys/build/tests/vm/page-merge-stk                   |binary
+ src/filesys/build/tests/vm/page-merge-stk.d                 |    2 
+ src/filesys/build/tests/vm/page-merge-stk.o                 |binary
+ src/filesys/build/tests/vm/page-parallel                    |binary
+ src/filesys/build/tests/vm/page-parallel.d                  |    3 
+ src/filesys/build/tests/vm/page-parallel.o                  |binary
+ src/filesys/build/tests/vm/page-shuffle                     |binary
+ src/filesys/build/tests/vm/page-shuffle.d                   |    4 
+ src/filesys/build/tests/vm/page-shuffle.o                   |binary
+ src/filesys/build/tests/vm/parallel-merge.d                 |    5 
+ src/filesys/build/tests/vm/parallel-merge.o                 |binary
+ src/filesys/build/tests/vm/pt-bad-addr                      |binary
+ src/filesys/build/tests/vm/pt-bad-addr.d                    |    3 
+ src/filesys/build/tests/vm/pt-bad-addr.o                    |binary
+ src/filesys/build/tests/vm/pt-bad-read                      |binary
+ src/filesys/build/tests/vm/pt-bad-read.d                    |    3 
+ src/filesys/build/tests/vm/pt-bad-read.o                    |binary
+ src/filesys/build/tests/vm/pt-big-stk-obj                   |binary
+ src/filesys/build/tests/vm/pt-big-stk-obj.d                 |    5 
+ src/filesys/build/tests/vm/pt-big-stk-obj.o                 |binary
+ src/filesys/build/tests/vm/pt-grow-bad                      |binary
+ src/filesys/build/tests/vm/pt-grow-bad.d                    |    4 
+ src/filesys/build/tests/vm/pt-grow-bad.o                    |binary
+ src/filesys/build/tests/vm/pt-grow-pusha                    |binary
+ src/filesys/build/tests/vm/pt-grow-pusha.d                  |    5 
+ src/filesys/build/tests/vm/pt-grow-pusha.o                  |binary
+ src/filesys/build/tests/vm/pt-grow-stack                    |binary
+ src/filesys/build/tests/vm/pt-grow-stack.d                  |    5 
+ src/filesys/build/tests/vm/pt-grow-stack.o                  |binary
+ src/filesys/build/tests/vm/pt-grow-stk-sc                   |binary
+ src/filesys/build/tests/vm/pt-grow-stk-sc.d                 |    4 
+ src/filesys/build/tests/vm/pt-grow-stk-sc.o                 |binary
+ src/filesys/build/tests/vm/pt-write-code                    |binary
+ src/filesys/build/tests/vm/pt-write-code-2.d                |    3 
+ src/filesys/build/tests/vm/pt-write-code-2.o                |binary
+ src/filesys/build/tests/vm/pt-write-code.d                  |    3 
+ src/filesys/build/tests/vm/pt-write-code.o                  |binary
+ src/filesys/build/tests/vm/pt-write-code2                   |binary
+ src/filesys/build/tests/vm/qsort.d                          |    3 
+ src/filesys/build/tests/vm/qsort.o                          |binary
+ src/filesys/build/threads/init.d                            |   16 
+ src/filesys/build/threads/init.o                            |binary
+ src/filesys/build/threads/interrupt.d                       |    7 
+ src/filesys/build/threads/interrupt.o                       |binary
+ src/filesys/build/threads/intr-stubs.d                      |    1 
+ src/filesys/build/threads/intr-stubs.o                      |binary
+ src/filesys/build/threads/kernel.lds.s                      |   21 
+ src/filesys/build/threads/loader.o                          |binary
+ src/filesys/build/threads/malloc.d                          |    6 
+ src/filesys/build/threads/malloc.o                          |binary
+ src/filesys/build/threads/palloc.d                          |    6 
+ src/filesys/build/threads/palloc.o                          |binary
+ src/filesys/build/threads/start.d                           |    1 
+ src/filesys/build/threads/start.o                           |binary
+ src/filesys/build/threads/switch.d                          |    1 
+ src/filesys/build/threads/switch.o                          |binary
+ src/filesys/build/threads/synch.d                           |    5 
+ src/filesys/build/threads/synch.o                           |binary
+ src/filesys/build/threads/thread.d                          |   10 
+ src/filesys/build/threads/thread.o                          |binary
+ src/filesys/build/userprog/exception.d                      |    9 
+ src/filesys/build/userprog/exception.o                      |binary
+ src/filesys/build/userprog/gdt.d                            |    4 
+ src/filesys/build/userprog/gdt.o                            |binary
+ src/filesys/build/userprog/pagedir.d                        |    6 
+ src/filesys/build/userprog/pagedir.o                        |binary
+ src/filesys/build/userprog/process.d                        |   12 
+ src/filesys/build/userprog/process.o                        |binary
+ src/filesys/build/userprog/syscall.d                        |   10 
+ src/filesys/build/userprog/syscall.o                        |binary
+ src/filesys/build/userprog/tss.d                            |    5 
+ src/filesys/build/userprog/tss.o                            |binary
+ src/filesys/build/vm/frametable.d                           |   10 
+ src/filesys/build/vm/frametable.o                           |binary
+ src/filesys/build/vm/growstack.d                            |    7 
+ src/filesys/build/vm/growstack.o                            |binary
+ src/filesys/build/vm/mmap.d                                 |    8 
+ src/filesys/build/vm/mmap.o                                 |binary
+ src/filesys/build/vm/swap.d                                 |    4 
+ src/filesys/build/vm/swap.o                                 |binary
+ src/filesys/directory.c                                     |  199 +--
+ src/filesys/directory.h                                     |   17 
+ src/filesys/file.c                                          |   16 
+ src/filesys/file.h                                          |    2 
+ src/filesys/filesys.c                                       |  384 ++++++
+ src/filesys/filesys.h                                       |   23 
+ src/filesys/free-map.c                                      |   11 
+ src/filesys/fsutil.c                                        |   10 
+ src/filesys/inode.c                                         |  477 ++++++--
+ src/filesys/inode.h                                         |   12 
+ src/filesys/path.c                                          |  167 ++
+ src/filesys/path.h                                          |   11 
+ src/lib/kernel/list.c                                       |    2 
+ src/threads/build/Makefile                                  |    9 
+ src/threads/build/devices/block.o                           |binary
+ src/threads/build/devices/ide.o                             |binary
+ src/threads/build/devices/input.o                           |binary
+ src/threads/build/devices/intq.o                            |binary
+ src/threads/build/devices/kbd.o                             |binary
+ src/threads/build/devices/partition.o                       |binary
+ src/threads/build/devices/pit.o                             |binary
+ src/threads/build/devices/rtc.o                             |binary
+ src/threads/build/devices/serial.o                          |binary
+ src/threads/build/devices/shutdown.d                        |    3 
+ src/threads/build/devices/shutdown.o                        |binary
+ src/threads/build/devices/speaker.o                         |binary
+ src/threads/build/devices/timer.o                           |binary
+ src/threads/build/devices/vga.o                             |binary
+ src/threads/build/kernel.bin                                |binary
+ src/threads/build/kernel.o                                  |binary
+ src/threads/build/lib/arithmetic.o                          |binary
+ src/threads/build/lib/debug.o                               |binary
+ src/threads/build/lib/kernel/bitmap.o                       |binary
+ src/threads/build/lib/kernel/console.o                      |binary
+ src/threads/build/lib/kernel/debug.d                        |    4 
+ src/threads/build/lib/kernel/debug.o                        |binary
+ src/threads/build/lib/kernel/hash.o                         |binary
+ src/threads/build/lib/kernel/list.o                         |binary
+ src/threads/build/lib/random.o                              |binary
+ src/threads/build/lib/stdio.o                               |binary
+ src/threads/build/lib/stdlib.o                              |binary
+ src/threads/build/lib/string.o                              |binary
+ src/threads/build/lib/ustar.o                               |binary
+ src/threads/build/tests/threads/alarm-negative.o            |binary
+ src/threads/build/tests/threads/alarm-priority.o            |binary
+ src/threads/build/tests/threads/alarm-simultaneous.o        |binary
+ src/threads/build/tests/threads/alarm-wait.o                |binary
+ src/threads/build/tests/threads/alarm-zero.o                |binary
+ src/threads/build/tests/threads/mlfqs-block.o               |binary
+ src/threads/build/tests/threads/mlfqs-fair.o                |binary
+ src/threads/build/tests/threads/mlfqs-load-1.o              |binary
+ src/threads/build/tests/threads/mlfqs-load-60.o             |binary
+ src/threads/build/tests/threads/mlfqs-load-avg.o            |binary
+ src/threads/build/tests/threads/mlfqs-recent-1.o            |binary
+ src/threads/build/tests/threads/priority-change.d           |    3 
+ src/threads/build/tests/threads/priority-change.o           |binary
+ src/threads/build/tests/threads/priority-condvar.o          |binary
+ src/threads/build/tests/threads/priority-donate-chain.o     |binary
+ src/threads/build/tests/threads/priority-donate-lower.o     |binary
+ src/threads/build/tests/threads/priority-donate-multiple.o  |binary
+ src/threads/build/tests/threads/priority-donate-multiple2.o |binary
+ src/threads/build/tests/threads/priority-donate-nest.o      |binary
+ src/threads/build/tests/threads/priority-donate-one.o       |binary
+ src/threads/build/tests/threads/priority-donate-sema.o      |binary
+ src/threads/build/tests/threads/priority-fifo.o             |binary
+ src/threads/build/tests/threads/priority-preempt.o          |binary
+ src/threads/build/tests/threads/priority-sema.o             |binary
+ src/threads/build/tests/threads/tests.o                     |binary
+ src/threads/build/threads/init.d                            |    2 
+ src/threads/build/threads/init.o                            |binary
+ src/threads/build/threads/interrupt.d                       |    4 
+ src/threads/build/threads/interrupt.o                       |binary
+ src/threads/build/threads/intr-stubs.o                      |binary
+ src/threads/build/threads/loader.o                          |binary
+ src/threads/build/threads/malloc.o                          |binary
+ src/threads/build/threads/palloc.o                          |binary
+ src/threads/build/threads/start.o                           |binary
+ src/threads/build/threads/switch.o                          |binary
+ src/threads/build/threads/synch.o                           |binary
+ src/threads/build/threads/thread.d                          |   12 
+ src/threads/build/threads/thread.o                          |binary
+ src/threads/fixed-point.h                                   |   14 
+ src/threads/init.c                                          |    9 
+ src/threads/synch.c                                         |  115 +-
+ src/threads/synch.h                                         |    4 
+ src/threads/thread.c                                        |  518 ++++++++-
+ src/threads/thread.h                                        |   85 +
+ src/threads/vaddr.h                                         |   16 
+ src/userprog/exception.c                                    |   27 
+ src/userprog/pagedir.c                                      |  117 +-
+ src/userprog/pagedir.h                                      |   19 
+ src/userprog/process.c                                      |  394 +++++--
+ src/userprog/syscall.c                                      |  439 +++++++
+ src/vm/frametable.c                                         |  671 ++++++++++++
+ src/vm/frametable.h                                         |   12 
+ src/vm/growstack.c                                          |   47 
+ src/vm/growstack.h                                          |   10 
+ src/vm/mmap.c                                               |  121 ++
+ src/vm/mmap.h                                               |   23 
+ src/vm/pageinfo.h                                           |   31 
+ src/vm/swap.c                                               |   77 +
+ src/vm/swap.h                                               |   11 
+ 691 files changed, 5044 insertions(+), 517 deletions(-)
